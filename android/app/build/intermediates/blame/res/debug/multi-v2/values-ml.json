@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/chjuca/React-Native/DoIt/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml",
+            "outputFile": "/home/chjuca/FIS/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml",
             "map": [
                 {
                     "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/57dea3235d86ae11bfbde21a376987dd/jetified-play-services-basement-17.0.0/res/values-ml/values.xml",

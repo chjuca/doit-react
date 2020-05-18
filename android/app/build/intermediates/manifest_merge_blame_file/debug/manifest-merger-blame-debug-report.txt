@@ -9,98 +9,248 @@
 9        android:targetSdkVersion="28" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/home/chjuca/React-Native/DoIt/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/home/chjuca/React-Native/DoIt/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->/home/chjuca/FIS/doit-react/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/home/chjuca/FIS/doit-react/android/app/src/debug/AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:4:5-67
-12-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:4:22-64
+12-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:4:22-64
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 13-->[com.facebook.flipper:flipper:0.33.1] /home/chjuca/.gradle/caches/transforms-2/files-2.1/d33abdf6229eb606e7780f6478dc6076/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
 13-->[com.facebook.flipper:flipper:0.33.1] /home/chjuca/.gradle/caches/transforms-2/files-2.1/d33abdf6229eb606e7780f6478dc6076/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
-14
-15    <application
-15-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:6:5-25:19
-16        android:name="com.doit.utpl.MainApplication"
-16-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:7:7-38
-17        android:allowBackup="false"
-17-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:11:7-34
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.1.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/d34ebd687fb326ca4061401134eb3a78/core-1.1.0/AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:9:7-41
-21        android:label="@string/app_name"
-21-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:8:7-39
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:10:7-52
-23        android:theme="@style/AppTheme"
-23-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:12:7-38
-24        android:usesCleartextTraffic="true" >
-24-->/home/chjuca/React-Native/DoIt/android/app/src/debug/AndroidManifest.xml:7:18-53
-25        <activity
-25-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:13:7-23:18
-26            android:name="com.doit.utpl.MainActivity"
-26-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:14:9-37
-27            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-27-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:16:9-86
-28            android:label="@string/app_name"
-28-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:15:9-41
-29            android:launchMode="singleTask"
-29-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:17:9-40
-30            android:windowSoftInputMode="adjustResize" >
-30-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:18:9-51
-31            <intent-filter>
-31-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:19:9-22:25
-32                <action android:name="android.intent.action.MAIN" />
-32-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:20:13-65
-32-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:20:21-62
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:21:13-73
-34-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:21:23-70
-35            </intent-filter>
-36        </activity>
-37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-37-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:24:7-84
-37-->/home/chjuca/React-Native/DoIt/android/app/src/main/AndroidManifest.xml:24:17-81
-38        <activity
-38-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
-39            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-39-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
-40            android:excludeFromRecents="true"
-40-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
-41            android:exported="false"
-41-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
-42            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-42-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
-43        <!--
-44            Service handling Google Sign-In user revocation. For apps that do not integrate with
-45            Google Sign-In, this service will never be started.
-46        -->
-47        <service
-47-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
-48            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-48-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
-49            android:exported="true"
-49-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
-50            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-50-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
-51
-52        <activity
-52-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-53            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-53-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-54            android:exported="false"
-54-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-55            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-55-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-56
-57        <meta-data
-57-->[com.google.android.gms:play-services-basement:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/57dea3235d86ae11bfbde21a376987dd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-58            android:name="com.google.android.gms.version"
-58-->[com.google.android.gms:play-services-basement:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/57dea3235d86ae11bfbde21a376987dd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-59            android:value="@integer/google_play_services_version" />
-59-->[com.google.android.gms:play-services-basement:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/57dea3235d86ae11bfbde21a376987dd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-60    </application>
-61
-62</manifest>
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+14-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+15-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
+15-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
+16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+16-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:26:5-82
+16-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:26:22-79
+17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+17-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:26:5-110
+17-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:26:22-107
+18
+19    <application
+19-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:6:5-25:19
+20        android:name="com.doit.utpl.MainApplication"
+20-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:7:7-38
+21        android:allowBackup="false"
+21-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:11:7-34
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/d34ebd687fb326ca4061401134eb3a78/core-1.1.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:9:7-41
+25        android:label="@string/app_name"
+25-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:8:7-39
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:10:7-52
+27        android:theme="@style/AppTheme"
+27-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:12:7-38
+28        android:usesCleartextTraffic="true" >
+28-->/home/chjuca/FIS/doit-react/android/app/src/debug/AndroidManifest.xml:7:18-53
+29        <activity
+29-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:13:7-23:18
+30            android:name="com.doit.utpl.MainActivity"
+30-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:14:9-37
+31            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+31-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:16:9-86
+32            android:label="@string/app_name"
+32-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:15:9-41
+33            android:launchMode="singleTask"
+33-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:17:9-40
+34            android:windowSoftInputMode="adjustResize" >
+34-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:18:9-51
+35            <intent-filter>
+35-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:19:9-22:25
+36                <action android:name="android.intent.action.MAIN" />
+36-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:20:13-65
+36-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:20:21-62
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:21:13-73
+38-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:21:23-70
+39            </intent-filter>
+40        </activity>
+41        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+41-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:24:7-84
+41-->/home/chjuca/FIS/doit-react/android/app/src/main/AndroidManifest.xml:24:17-81
+42
+43        <service
+43-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-20:19
+44            android:name="com.google.firebase.components.ComponentDiscoveryService"
+44-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-89
+45            android:exported="false" >
+45-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:35:13-37
+46            <meta-data
+46-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:85
+47                android:name="com.google.firebase.components:io.invertase.firebase.ReactNativeFirebaseAppRegistrar"
+47-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-116
+48                android:value="com.google.firebase.components.ComponentRegistrar" />
+48-->[:react-native-firebase] /home/chjuca/FIS/doit-react/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-82
+49            <meta-data
+49-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:36:13-38:85
+50                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+50-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:37:17-109
+51                android:value="com.google.firebase.components.ComponentRegistrar" />
+51-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:38:17-82
+52            <meta-data
+52-->[com.google.android.gms:play-services-measurement-api:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4aa9f1448ad0e174326ac55d20df3448/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:30:13-32:85
+53                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+53-->[com.google.android.gms:play-services-measurement-api:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4aa9f1448ad0e174326ac55d20df3448/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:31:17-139
+54                android:value="com.google.firebase.components.ComponentRegistrar" />
+54-->[com.google.android.gms:play-services-measurement-api:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4aa9f1448ad0e174326ac55d20df3448/jetified-play-services-measurement-api-16.5.0/AndroidManifest.xml:32:17-82
+55            <meta-data
+55-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:32:13-34:85
+56                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+56-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:33:17-96
+57                android:value="com.google.firebase.components.ComponentRegistrar" />
+57-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:34:17-82
+58        </service>
+59
+60        <activity
+60-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:24:9-31:50
+61            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+61-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:25:13-85
+62            android:excludeFromRecents="true"
+62-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:26:13-46
+63            android:exported="true"
+63-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:27:13-36
+64            android:launchMode="singleTask"
+64-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:28:13-44
+65            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+65-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:29:13-102
+66            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+66-->[com.google.firebase:firebase-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/28fc26889f1cf510988e7593f72b82cc/jetified-firebase-auth-17.0.0/AndroidManifest.xml:30:13-72
+67        <activity
+67-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
+68            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+68-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
+69            android:excludeFromRecents="true"
+69-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
+70            android:exported="false"
+70-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
+71            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+71-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
+72        <!--
+73            Service handling Google Sign-In user revocation. For apps that do not integrate with
+74            Google Sign-In, this service will never be started.
+75        -->
+76        <service
+76-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
+77            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+77-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+78            android:exported="true"
+78-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
+79            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+79-->[com.google.android.gms:play-services-auth:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
+80
+81        <receiver
+81-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:37:9-44:20
+82            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+82-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:38:13-78
+83            android:exported="true"
+83-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:39:13-36
+84            android:permission="com.google.android.c2dm.permission.SEND" >
+84-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:40:13-73
+85            <intent-filter>
+85-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:41:13-43:29
+86                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+86-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:42:17-81
+86-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:42:25-78
+87            </intent-filter>
+88        </receiver>
+89        <!--
+90             FirebaseInstanceIdService performs security checks at runtime,
+91             no need for explicit permissions despite exported="true"
+92        -->
+93        <service
+93-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:50:9-56:19
+94            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+94-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:51:13-77
+95            android:exported="true" >
+95-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:52:13-36
+96            <intent-filter android:priority="-500" >
+96-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:53:13-55:29
+96-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:53:28-51
+97                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+97-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:54:17-80
+97-->[com.google.firebase:firebase-iid:17.1.2] /home/chjuca/.gradle/caches/transforms-2/files-2.1/4f0325b97fc7752634a2deab83e3fb83/jetified-firebase-iid-17.1.2/AndroidManifest.xml:54:25-77
+98            </intent-filter>
+99        </service>
+100
+101        <activity
+101-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+102            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+102-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+103            android:exported="false"
+103-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+104            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+104-->[com.google.android.gms:play-services-base:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/fb7de2476d4d4229ba0a3e92f56c404a/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+105
+106        <provider
+106-->[com.google.firebase:firebase-common:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/425e21763a3a30124f918f87332e3ea9/jetified-firebase-common-17.0.0/AndroidManifest.xml:12:9-16:39
+107            android:name="com.google.firebase.provider.FirebaseInitProvider"
+107-->[com.google.firebase:firebase-common:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/425e21763a3a30124f918f87332e3ea9/jetified-firebase-common-17.0.0/AndroidManifest.xml:13:13-77
+108            android:authorities="com.doit.utpl.firebaseinitprovider"
+108-->[com.google.firebase:firebase-common:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/425e21763a3a30124f918f87332e3ea9/jetified-firebase-common-17.0.0/AndroidManifest.xml:14:13-72
+109            android:exported="false"
+109-->[com.google.firebase:firebase-common:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/425e21763a3a30124f918f87332e3ea9/jetified-firebase-common-17.0.0/AndroidManifest.xml:15:13-37
+110            android:initOrder="100" />
+110-->[com.google.firebase:firebase-common:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/425e21763a3a30124f918f87332e3ea9/jetified-firebase-common-17.0.0/AndroidManifest.xml:16:13-36
+111
+112        <receiver
+112-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:29:9-33:20
+113            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+113-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:30:13-85
+114            android:enabled="true"
+114-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:31:13-35
+115            android:exported="false" >
+115-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:32:13-37
+116        </receiver>
+117        <receiver
+117-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:34:9-42:20
+118            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+118-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:35:13-100
+119            android:enabled="true"
+119-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:36:13-35
+120            android:exported="true"
+120-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:37:13-36
+121            android:permission="android.permission.INSTALL_PACKAGES" >
+121-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:38:13-69
+122            <intent-filter>
+122-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:39:13-41:29
+123                <action android:name="com.android.vending.INSTALL_REFERRER" />
+123-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:40:17-79
+123-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:40:25-76
+124            </intent-filter>
+125        </receiver>
+126
+127        <service
+127-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:44:9-47:40
+128            android:name="com.google.android.gms.measurement.AppMeasurementService"
+128-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:45:13-84
+129            android:enabled="true"
+129-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:46:13-35
+130            android:exported="false" />
+130-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:47:13-37
+131        <service
+131-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:48:9-52:72
+132            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+132-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:49:13-87
+133            android:enabled="true"
+133-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:50:13-35
+134            android:exported="false"
+134-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:51:13-37
+135            android:permission="android.permission.BIND_JOB_SERVICE" />
+135-->[com.google.android.gms:play-services-measurement:16.5.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/41882c4a8774e2794689008b4f0684cc/jetified-play-services-measurement-16.5.0/AndroidManifest.xml:52:13-69
+136
+137        <meta-data
+137-->[com.google.android.gms:play-services-basement:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/57dea3235d86ae11bfbde21a376987dd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+138            android:name="com.google.android.gms.version"
+138-->[com.google.android.gms:play-services-basement:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/57dea3235d86ae11bfbde21a376987dd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+139            android:value="@integer/google_play_services_version" />
+139-->[com.google.android.gms:play-services-basement:17.0.0] /home/chjuca/.gradle/caches/transforms-2/files-2.1/57dea3235d86ae11bfbde21a376987dd/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+140    </application>
+141
+142</manifest>

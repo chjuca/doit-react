@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/chjuca/React-Native/DoIt/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/home/chjuca/FIS/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
+                {
+                    "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/e31b9f44302c0472fd40e09a049b648e/media-1.0.0/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
+                    },
+                    "to": {
+                        "startLines": "266,269,273,277",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19512,19680,19969,20265",
+                        "endLines": "268,271,275,279",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "19675,19838,20132,20427"
+                    }
+                },
                 {
                     "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/021161095b79e3d2fdb8ba1de84df439/appcompat-1.1.0/res/values-v21/values-v21.xml",
                     "from": {
@@ -33,12 +52,12 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,264,265,266,267,268,271",
+                        "startLines": "2,3,4,5,264,265,272,276,280,283",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19270,19386,19512,19638,19766,19938",
-                        "endLines": "2,3,4,5,264,265,266,267,270,275",
+                        "startOffsets": "55,159,223,290,19270,19386,19843,20137,20432,20604",
+                        "endLines": "2,3,4,5,264,265,272,276,282,287",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19381,19507,19633,19761,19933,20271"
+                        "endOffsets": "154,218,285,349,19381,19507,19964,20260,20599,20937"
                     }
                 }
             ]

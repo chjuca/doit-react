@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/chjuca/React-Native/DoIt/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml",
+            "outputFile": "/home/chjuca/FIS/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/d34ebd687fb326ca4061401134eb3a78/core-1.1.0/res/values-ky/values-ky.xml",

@@ -1,4 +1,4 @@
-#Sun May 17 18:45:06 ECT 2020
-base.0=/home/chjuca/React-Native/DoIt/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Sun May 17 22:05:10 ECT 2020
+base.0=/home/chjuca/FIS/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

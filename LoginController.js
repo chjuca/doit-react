@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Image,} from 'react-native';
-import { Header, LearnMoreLinks, Colors, DebugInstructions, ReloadInstructions,} from 'react-native/Libraries/NewAppScreen';
+import { Header, LearnMoreLinks, Colors } from 'react-native/Libraries/NewAppScreen';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
+import firebase from 'react-native-firebase'
 
 export default class LoginController extends Component {
   constructor(props) {
@@ -26,8 +27,6 @@ export default class LoginController extends Component {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       this.setState({ userInfo: userInfo, loggedIn: true });
-
-
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
@@ -40,6 +39,30 @@ export default class LoginController extends Component {
       }
     }
   };
+
+  firebaseGoogleLogin = async () => {
+    try {
+      // add any configuration settings here:
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      this.setState({ userInfo: userInfo, loggedIn: true });
+      // create a new firebase credential with the token
+      const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
+      // login with credential
+      const firebaseUserCredential = await firebase.auth().signInWithCredential(credential);
+    } catch (error) {
+      console.log(error)
+      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        // user cancelled the login flow
+      } else if (error.code === statusCodes.IN_PROGRESS) {
+        // operation (f.e. sign in) is in progress already
+      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        // play services not available or outdated
+      } else {
+        // some other error happened
+      }
+    }
+  }
 
   getCurrentUserInfo = async () => {
     try {
@@ -86,7 +109,7 @@ export default class LoginController extends Component {
                   style={{ width: 192, height: 48 }}
                   size={GoogleSigninButton.Size.Wide}
                   color={GoogleSigninButton.Color.Dark}
-                  onPress={this._signIn}
+                  onPress={this.firebaseGoogleLogin}
                   disabled={this.state.isSigninInProgress} />
               </View>
               <View style={styles.buttonContainer}>
