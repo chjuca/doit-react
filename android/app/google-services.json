@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "730817549359",
+    "firebase_url": "https://doit-utpl-project.firebaseio.com",
+    "project_id": "doit-utpl-project",
+    "storage_bucket": "doit-utpl-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730817549359:android:41c500191cb7782d3262da",
+        "android_client_info": {
+          "package_name": "com.doit.utpl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730817549359-3k9d7qkn2mvakhha422evjkq9a1fmggr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doit.utpl",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "730817549359-gd0h6hvt2jt15bpb45kt6tco23uvisj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR1DWyR7bjA5CG9RRTj4U9pcpRIlpFNM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730817549359-gd0h6hvt2jt15bpb45kt6tco23uvisj7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
