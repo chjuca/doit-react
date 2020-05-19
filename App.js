@@ -1,17 +1,21 @@
-import React from 'react';
-//import {createStackNavigator, createAppContainer} from 'react-navigation';
-//import LoginController from './LoginController';
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginController from './LoginController';
 import CalendarListComponent from './src/calendar/CalendarListComponent';
 
-// const LoginNavigator = createStackNavigator({
-//     login: {screen: LoginController}
-// })
+const Stack = createStackNavigator();
 
-// const CalendarListNavigator = createStackNavigator({
-//     calendarList: {screen: CalendarListComponent}
-// })
+function App() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="CalendarList" component={CalendarListComponent} />
+                <Stack.Screen name="Login" component={LoginController} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
 
-// export default createAppContainer(CalendarListNavigator);
-
-const App = () => {return (<CalendarListComponent/>);};
 export default App;
