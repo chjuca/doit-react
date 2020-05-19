@@ -14,8 +14,6 @@ export default class CalendarListComponent extends Component {
             <View>
                 <Button title='Login' onPress={() => this.props.navigation.navigate('Login')} />
                 <CalendarList
-                    // Callback which gets executed when visible months change in scroll view. Default = undefined
-                    onVisibleMonthsChange={(months) => { console.log('now these months are visible', months); }}
                     // Max amount of months allowed to scroll to the past. Default = 50
                     pastScrollRange={50}
                     // Max amount of months allowed to scroll to the future. Default = 50
@@ -25,7 +23,7 @@ export default class CalendarListComponent extends Component {
                     // Enable or disable vertical scroll indicator. Default = false
                     showScrollIndicator={true}
                     // Dia presionado
-                    onDayPress={(day) => { console.log(day.timestamp) }}
+                    onDayPress={(day) => { this.props.navigation.navigate('AgendaComponent') }}
                 />
             </View>
 
