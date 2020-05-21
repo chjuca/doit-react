@@ -15,7 +15,7 @@ export default class LoginController extends Component {
   //
   componentDidMount() {
     GoogleSignin.configure({
-      webClientId: '730817549359-k7v1v84418jl4j82n1jekgif4dnv02m1.apps.googleusercontent.com',
+      webClientId: '696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com',
       offlineAccess: true,
       hostedDomain: '',
       forceConsentPrompt: true,

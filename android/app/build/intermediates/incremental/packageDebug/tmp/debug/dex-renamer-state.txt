@@ -1,4 +1,4 @@
-#Mon May 18 20:24:14 ECT 2020
+#Thu May 21 15:57:43 ECT 2020
 base.0=/home/chjuca/FIS/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Agenda } from 'react-native-calendars';
 import { View, Button } from 'react-native'
 import EventComponent from '../event/EventComponent'
+import EventService from '../services/event.services';
 
 export default class AgendaComponent extends Component {
 
@@ -15,6 +16,7 @@ export default class AgendaComponent extends Component {
                 { name: 'Control de Lectura ', hour: '10:00AM -10:45AM', description: 'lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit', image: 'CL', color: '#039BE5', date: '2020-05-25' }],
             items: {}
         }
+        eventService: EventService;
     }
 
     componentDidMount() {
@@ -33,6 +35,7 @@ export default class AgendaComponent extends Component {
         this.setState({items : itemsAux}, ()=>{
             console.log(this.state.items);
         });
+        this.eventService.getEvents();
     }
 
     render() {

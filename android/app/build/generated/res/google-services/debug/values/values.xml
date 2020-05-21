@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">730817549359-gd0h6hvt2jt15bpb45kt6tco23uvisj7.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://doit-utpl-project.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">730817549359</string>
-    <string name="google_api_key" translatable="false">AIzaSyDR1DWyR7bjA5CG9RRTj4U9pcpRIlpFNM4</string>
-    <string name="google_app_id" translatable="false">1:730817549359:android:41c500191cb7782d3262da</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDR1DWyR7bjA5CG9RRTj4U9pcpRIlpFNM4</string>
-    <string name="google_storage_bucket" translatable="false">doit-utpl-project.appspot.com</string>
-    <string name="project_id" translatable="false">doit-utpl-project</string>
+    <string name="default_web_client_id" translatable="false">696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://doit-react-project-784d9.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">696883679209</string>
+    <string name="google_api_key" translatable="false">AIzaSyCjiVFPdavPJs3jg6e6KL2tXN1wxiiDQ5E</string>
+    <string name="google_app_id" translatable="false">1:696883679209:android:d39f99fb69149e8add0578</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCjiVFPdavPJs3jg6e6KL2tXN1wxiiDQ5E</string>
+    <string name="google_storage_bucket" translatable="false">doit-react-project-784d9.appspot.com</string>
+    <string name="project_id" translatable="false">doit-react-project-784d9</string>
 </resources>
