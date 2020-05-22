@@ -1,18 +1,27 @@
 import firebase from '../../Firebase'
+import LoginController from '../../LoginController';
 
 export default class EventService {
 
-    ref = firebase.firestore().collection('boards');
+    databaseService = firebase.database();
+    ref = this.databaseService.ref('events');
+    login = new LoginController();
+    events = [];
 
-    getEvents() {
-        return allEvents = ref.get()
-            .then(snapshot => {
-                snapshot.forEach(doc => {
-                    console.log(doc.id, '=>', doc.data());
-                });
-            })
-            .catch(err => {
-                console.log('Error getting documents', err);
-            });
+    async addEvent() {
+
+        await this.ref.push({
+            campoTest: 'valor del test',
+            ahora: new Date().getTime(),
+        });
     }
+
+    async getEvent() {
+        await this.ref.once('value', (snapshot) => {
+            this.events = snapshot.val()
+        });
+        return this.events;
+    }
+
+
 }

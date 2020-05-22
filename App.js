@@ -12,8 +12,8 @@ function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Login" component={LoginController} />
                 <Stack.Screen name="AgendaComponent" component={AgendaComponent} />
+                <Stack.Screen name="Login" component={LoginController} />
                 <Stack.Screen name="CalendarList" component={CalendarListComponent} />
             </Stack.Navigator>
         </NavigationContainer>
