@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from "react";
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Image,} from 'react-native';
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Image } from 'react-native';
 import { Header, LearnMoreLinks, Colors } from 'react-native/Libraries/NewAppScreen';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 import firebase from 'react-native-firebase'
+import AsyncStorage from 'react-native';
 import StaticData from './StaticData';
 
 export default class LoginController extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +15,8 @@ export default class LoginController extends Component {
       loggedIn: false
     }
   }
-  //
+
+
   componentDidMount() {
     GoogleSignin.configure({
       webClientId: '696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com',
@@ -22,24 +25,6 @@ export default class LoginController extends Component {
       forceConsentPrompt: true,
     });
   }
-
-  _signIn = async () => {
-    try {
-      await GoogleSignin.hasPlayServices();
-      const userInfo = await GoogleSignin.signIn();
-      this.setState({ userInfo: userInfo, loggedIn: true });
-    } catch (error) {
-      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-        // user cancelled the login flow
-      } else if (error.code === statusCodes.IN_PROGRESS) {
-        // operation (f.e. sign in) is in progress already
-      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-        // play services not available or outdated
-      } else {
-        // some other error happened
-      }
-    }
-  };
 
   firebaseGoogleLogin = async () => {
     try {
@@ -50,8 +35,7 @@ export default class LoginController extends Component {
       // create a new firebase credential with the token
       const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
       // login with credential
-      const firebaseUserCredential = await firebase.auth().signInWithCredential(credential);
-      StaticData.CURRENT_USER = userInfo;
+      StaticData.CURRENT_USER  = await firebase.auth().currentUser;
     } catch (error) {
       console.log(error)
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -66,27 +50,12 @@ export default class LoginController extends Component {
     }
   }
 
-  getCurrentUserInfo = async () => {
-    try {
-      const userInfo = await GoogleSignin.signInSilently();
-      this.setState({ userInfo });
-      console.log(userInfo);
-    } catch (error) {
-      if (error.code === statusCodes.SIGN_IN_REQUIRED) {
-        // user has not signed in yet
-        this.setState({ loggedIn: false });
-      } else {
-        // some other error
-        this.setState({ loggedIn: false });
-      }
-    }
-  };
-
   signOut = async () => {
     try {
       await GoogleSignin.revokeAccess();
       await GoogleSignin.signOut();
       this.setState({ user: null, loggedIn: false }); // Remember to remove the user from your app's state as well
+      StaticData.CURRENT_USER = null;
     } catch (error) {
       console.error(error);
     }
@@ -180,7 +149,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ccc",
     borderBottomWidth: 1
   },
-  dp:{
+  dp: {
     marginTop: 32,
     paddingHorizontal: 24,
     flexDirection: 'row',

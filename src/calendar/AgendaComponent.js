@@ -3,8 +3,8 @@ import { Agenda } from 'react-native-calendars';
 import EventComponent from '../event/EventComponent'
 import EventService from '../services/event.services';
 import LoginController from '../../LoginController';
-import StaticData from '../../StaticData'
-import SyncStorage from 'sync-storage';
+import StaticData from '../../StaticData';
+import { any } from 'prop-types';
 
 export default class AgendaComponent extends Component {
 
@@ -16,7 +16,8 @@ export default class AgendaComponent extends Component {
                 { name: 'Deber Sistemas Operativos', hour: '10:00AM -10:45AM', description: 'lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit', image: 'DS', color: '#E67C73', date: '2020-05-23' },
                 { name: 'Presentar Informe', hour: '8:00AM -10:45AM', description: 'lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit', image: 'PI', color: '#3F51B5', date: '2020-05-25' },
                 { name: 'Control de Lectura ', hour: '10:00AM -10:45AM', description: 'lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit', image: 'CL', color: '#039BE5', date: '2020-05-25' }],
-            items: {}
+            items: {},
+            currentUser: any
         }
     }
 
@@ -36,14 +37,9 @@ export default class AgendaComponent extends Component {
         for (var [key, value] of items) {
             itemsAux[key] = value;
         }
-        this.setState({ items: itemsAux }, () => {
-        });
-        SyncStorage.set('foo', 'bar');
-
-        const result = SyncStorage.get('foo');
-        console.log(result); // 'bar'
+        this.setState({ items: itemsAux });
+        console.log(StaticData.CURRENT_USER.uid);
     }
-
 
     render() {
         return (
@@ -54,6 +50,5 @@ export default class AgendaComponent extends Component {
             />
         )
     }
-
 
 }
