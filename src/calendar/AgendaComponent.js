@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Agenda } from 'react-native-calendars';
 import EventComponent from '../event/EventComponent'
 import EventService from '../services/event.services';
+import LoginController from '../../LoginController';
+import StaticData from '../../StaticData'
+import SyncStorage from 'sync-storage';
 
 export default class AgendaComponent extends Component {
 
@@ -17,6 +20,7 @@ export default class AgendaComponent extends Component {
         }
     }
 
+    loginController = new LoginController();
     instancia = new EventService();
 
     async componentDidMount() {
@@ -34,8 +38,10 @@ export default class AgendaComponent extends Component {
         }
         this.setState({ items: itemsAux }, () => {
         });
-        console.log(await this.instancia.getEvent());
+        SyncStorage.set('foo', 'bar');
 
+        const result = SyncStorage.get('foo');
+        console.log(result); // 'bar'
     }
 
 

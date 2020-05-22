@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Im
 import { Header, LearnMoreLinks, Colors } from 'react-native/Libraries/NewAppScreen';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 import firebase from 'react-native-firebase'
+import StaticData from './StaticData';
 
 export default class LoginController extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ export default class LoginController extends Component {
       const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
       // login with credential
       const firebaseUserCredential = await firebase.auth().signInWithCredential(credential);
+      StaticData.CURRENT_USER = userInfo;
     } catch (error) {
       console.log(error)
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -119,6 +121,7 @@ export default class LoginController extends Component {
                   title="Signout"
                   color="#841584">
                 </Button>}
+                <Button title='Agenda' onPress={() => this.props.navigation.navigate('AgendaComponent')} />
               </View>
 
               {!this.state.loggedIn && <LearnMoreLinks />}

@@ -17,6 +17,7 @@ export default class EventService {
     }
 
     async getEvent() {
+        await console.log(firebase.auth().currentUser);
         await this.ref.once('value', (snapshot) => {
             this.events = snapshot.val()
         });
