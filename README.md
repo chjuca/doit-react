@@ -2,9 +2,6 @@
 ## Repositorio para la aplicacion
 
 Este es el repositorio oficial para el desarrollo de la app Do It
-Desarrolladores
-
-Ingeniero gran jefe: @chjuca
 
 ## Actualizar tus repositorio
 ### Clonar el repositorio
