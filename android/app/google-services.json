@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "730817549359",
-    "firebase_url": "https://doit-utpl-project.firebaseio.com",
-    "project_id": "doit-utpl-project",
-    "storage_bucket": "doit-utpl-project.appspot.com"
+    "project_number": "696883679209",
+    "firebase_url": "https://doit-react-project-784d9.firebaseio.com",
+    "project_id": "doit-react-project-784d9",
+    "storage_bucket": "doit-react-project-784d9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:730817549359:android:41c500191cb7782d3262da",
+        "mobilesdk_app_id": "1:696883679209:android:d39f99fb69149e8add0578",
         "android_client_info": {
           "package_name": "com.doit.utpl"
         }
       },
       "oauth_client": [
         {
-          "client_id": "730817549359-3k9d7qkn2mvakhha422evjkq9a1fmggr.apps.googleusercontent.com",
+          "client_id": "696883679209-gbl26h7egsq1gq7kajmvdhiaeoe9nocp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.doit.utpl",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "730817549359-gd0h6hvt2jt15bpb45kt6tco23uvisj7.apps.googleusercontent.com",
+          "client_id": "696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDR1DWyR7bjA5CG9RRTj4U9pcpRIlpFNM4"
+          "current_key": "AIzaSyCjiVFPdavPJs3jg6e6KL2tXN1wxiiDQ5E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "730817549359-gd0h6hvt2jt15bpb45kt6tco23uvisj7.apps.googleusercontent.com",
+              "client_id": "696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
