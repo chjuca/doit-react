@@ -1,13 +1,13 @@
-#Do It
-##Repositorio para la aplicacion
+# Do It
+## Repositorio para la aplicacion
 
 Este es el repositorio oficial para el desarrollo de la app Do It
 Desarrolladores
 
 Ingeniero gran jefe: @chjuca
 
-##Actualizar tus repositorio
-###Clonar el repositorio
+## Actualizar tus repositorio
+### Clonar el repositorio
 
 Lo primero que tienes que hacer es clonar el repositorio, puedes hacerlo a través de SSH git@github.com:chjuca/doit.git o directamente a través del vínculo HTTP https://github.com/chjuca/doit . La ventaja ded SSH es que no tienes que estar introduciendo tus credenciales de github cuando tengas que hacer un push desde la consola.
 Actualizar las ramas
@@ -16,21 +16,24 @@ Si acabas de clonar el repositorio, no necesitas hacer esto, pero si no, simplem
 
 git status En el log de este comando te dará el nombre de la rama, por ejemplo : master
 
-Una vez que sabes el nombre de la rama, puedes traerte los cambios de la rama en github con el comandod: git pull origin [nombre de la rama]
-Cambiarse de ramas
+Una vez que sabes el nombre de la rama, puedes traerte los cambios de la rama en github con el comandod: 
+
+    git pull origin [nombre de la rama]
+    
+### Cambiarse de ramas
 
 Para ello usas el comando git checkout [nombre de la rama] Recuerda que debes tener tu arbol de trabajo limpio ara poder hacerlo.
 ¿Cómo subir tus cambios?
 
 Si quieres hacer cambios, lo primero que dedbes hacer es crear una nueva rama a partir de la rama development.
 
-´´´git checkout development´´´
+    git checkout development
 
-git pull origin development
+    git pull origin development
 
-git branch [nombre de la nueva rama]
-
-git checkout [nombre de la nueva rama]
+    git branch [nombre de la nueva rama]
+    
+    git checkout [nombre de la nueva rama]
 
 Ahora si puedes empezar a hacer modificaciones. Puedes ir haciendo commits por cada cambio que hagas para tener un mejor historial de tu código.
 
@@ -43,6 +46,6 @@ Una vez que hayas terminado de hacer tus contribuciones en tu rama, es momento d
     Crear un pull request desde tu rama hacia development: Abres un nuevo pull request En base escoges development En compare escoges tu rama Creas el pull request Nota: Aquí lo ideal es que alguien más aceptase tu pull request
 
 Y listo.
-###Referencias
+### Referencias
 
 Guía de Git y GitHub: https://medium.com/@sthefany/primeros-pasos-con-github-7d5e0769158c
