@@ -35,7 +35,7 @@ export default class LoginController extends Component {
       // create a new firebase credential with the token
       const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
       // login with credential
-      StaticData.CURRENT_USER  = await firebase.auth().currentUser;
+      StaticData.CURRENT_USER = userInfo;
     } catch (error) {
       console.log(error)
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -90,7 +90,7 @@ export default class LoginController extends Component {
                   title="Signout"
                   color="#841584">
                 </Button>}
-                <Button title='Agenda' onPress={() => this.props.navigation.navigate('AgendaComponent')} />
+                <Button title='Group' onPress={() => this.props.navigation.navigate('CreateGroupComponent')} />
               </View>
 
               {!this.state.loggedIn && <LearnMoreLinks />}
