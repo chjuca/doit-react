@@ -42,6 +42,7 @@ export default class GroupService {
                 name: user.name,
                 email: user.email,
                 id: user.id,
+                photo: user.photo,
                 role: "MEMBER"
             }
         )

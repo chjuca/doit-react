@@ -29,6 +29,7 @@ export default class GroupComponent extends Component {
             name: StaticData.CURRENT_USER.user.name,
             email: StaticData.CURRENT_USER.user.email,
             id: StaticData.CURRENT_USER.user.id,
+            photo: StaticData.CURRENT_USER.user.photo,
             role: "ADMIN"
         })
         groupObj.members = members;
