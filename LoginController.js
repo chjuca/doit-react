@@ -26,7 +26,27 @@ export default class LoginController extends Component {
     });
   }
 
+  getCurrentUserInfo = async () => {
+    try {
+      const userInfo = await GoogleSignin.signInSilently();
+      this.setState({ userInfo });
+      console.log(userInfo);
+    } catch (error) {
+      if (error.code === statusCodes.SIGN_IN_REQUIRED) {
+        // user has not signed in yet
+      } else {
+        // some other error
+      }
+    }
+  };
+
   firebaseGoogleLogin = async () => {
+    GoogleSignin.configure({
+      webClientId: '696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com',
+      offlineAccess: true,
+      hostedDomain: '',
+      forceConsentPrompt: true,
+    });
     try {
       // add any configuration settings here:
       await GoogleSignin.hasPlayServices();
@@ -35,7 +55,7 @@ export default class LoginController extends Component {
       // create a new firebase credential with the token
       const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
       // login with credential
-      StaticData.CURRENT_USER  = await firebase.auth().currentUser;
+      StaticData.CURRENT_USER = userInfo;
     } catch (error) {
       console.log(error)
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -90,7 +110,7 @@ export default class LoginController extends Component {
                   title="Signout"
                   color="#841584">
                 </Button>}
-                <Button title='Agenda' onPress={() => this.props.navigation.navigate('AgendaComponent')} />
+                <Button title='Group' onPress={() => this.props.navigation.navigate('CreateGroupComponent')} />
               </View>
 
               {!this.state.loggedIn && <LearnMoreLinks />}
