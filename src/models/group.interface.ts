@@ -6,6 +6,7 @@ export interface Group {
         name: string,
         email: string,
         id: string,
+        photo: string,
         role: string
     }[];
 }
