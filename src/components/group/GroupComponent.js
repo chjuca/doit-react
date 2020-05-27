@@ -24,7 +24,14 @@ export default class GroupComponent extends Component {
         groupObj = this.state.Group;
         const id = uuid.v4();
         groupObj.id = id;
-        groupObj.adminID = StaticData.CURRENT_USER.user;
+        let members = [];
+        members.push({
+            name: StaticData.CURRENT_USER.user.name,
+            email: StaticData.CURRENT_USER.user.email,
+            id: StaticData.CURRENT_USER.user.id,
+            role: "ADMIN"
+        })
+        groupObj.members = members;
         this.groupServices.addGroup(groupObj);
     }
 
