@@ -1,22 +1,20 @@
+import React, { Component } from "react";
 import { View, Text, Button, StyleSheet } from 'react-native';
 
 
-export default class JoinGroupComponent {
+export default class JoinGroupComponent extends Component {
+
     constructor(props) {
         super(props);
         this.state = {}
     }
 
-    joinGroup(){
-        console.log('Hola desde JoinGroup!')
-    }
-
-    render() {
+     render(){
         return (
             <View>
-                <Text> ¡Bienvenido! al grupo : name</Text>
-                <Button title="Unirme" onPress={() => this.joinGroup()} />
+                <Text> {this.props.route.params.name +' '+ this.props.route.params.groupId} </Text>
+                <Button title="Unirme"/>
             </View>
         );
-    }
+     }
 }
