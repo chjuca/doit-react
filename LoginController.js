@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from "react";
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Image } from 'react-native';
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Image, AsyncStorage } from 'react-native';
 import { Header, LearnMoreLinks, Colors } from 'react-native/Libraries/NewAppScreen';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 import firebase from 'react-native-firebase'
-import AsyncStorage from 'react-native';
 import StaticData from './StaticData';
 
 export default class LoginController extends Component {
@@ -26,36 +25,38 @@ export default class LoginController extends Component {
     });
   }
 
-  getCurrentUserInfo = async () => {
+  getCurrentUser = async () => {
     try {
-      const userInfo = await GoogleSignin.signInSilently();
-      this.setState({ userInfo });
-      console.log(userInfo);
-    } catch (error) {
-      if (error.code === statusCodes.SIGN_IN_REQUIRED) {
-        // user has not signed in yet
-      } else {
-        // some other error
+      const value = await AsyncStorage.getItem('currentUser');
+      if (value !== null) {
+        return JSON.parse(value);
       }
+    } catch (error) {
+    }
+  };
+
+  _storeData = async (userInfo) => {
+    try {
+      await AsyncStorage.setItem(
+        'currentUser', JSON.stringify(userInfo.user)
+      );
+    } catch (error) {
+      console.log('no funciono');
     }
   };
 
   firebaseGoogleLogin = async () => {
-    GoogleSignin.configure({
-      webClientId: '696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com',
-      offlineAccess: true,
-      hostedDomain: '',
-      forceConsentPrompt: true,
-    });
     try {
       // add any configuration settings here:
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
-      this.setState({ userInfo: userInfo, loggedIn: true });
+      this.setState({ userInfo: userInfo, loggedIn: true });;
+      this.getCurrentUser();
       // create a new firebase credential with the token
       const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
       // login with credential
       StaticData.CURRENT_USER = userInfo;
+      this._storeData(StaticData.CURRENT_USER);
     } catch (error) {
       console.log(error)
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {

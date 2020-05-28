@@ -6,7 +6,7 @@ import LoginController from './LoginController';
 import CalendarListComponent from './src/components/calendar/CalendarListComponent';
 import AgendaComponent from './src/components/calendar/AgendaComponent'
 import GroupComponent from './src/components/group/GroupComponent';
-import JoinGroupComponent from './src/components/group/joinGroupComponent'; 
+import JoinGroupComponent from './src/components/group/joinGroupComponent';
 //change to commit
 
 const Stack = createStackNavigator();

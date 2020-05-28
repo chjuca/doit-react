@@ -15,15 +15,19 @@ export default class JoinGroupComponent extends Component {
     loginServices = new LoginController();
 
     async componentDidMount(){
-        await this.loginServices.firebaseGoogleLogin();
+        StaticData.CURRENT_USER = await this.loginServices.getCurrentUser();
     }
 
 
      render(){
+        const nameGroup = this.props.route.params.name.replace("_",' ');
         return (
             <View>
-                <Text> {this.props.route.params.name +' '+ this.props.route.params.groupId} </Text>
-                <Button title = "Unirme al Grupo" onPress={() => this.groupServices.validateMember(this.props.route.params.groupId, StaticData.CURRENT_USER.user)} />
+                <Text> Bienvenido</Text>
+                <Text> Haz sido invitado al grupo</Text>
+                <Text> {nameGroup}</Text>
+                <Text> Da click en el boton de abajo para poder ver los eventos y hablar con miembros de Grupo</Text>
+                <Button title = "Unirme al Grupo" onPress={() => this.groupServices.validateMember(this.props.route.params.groupId, StaticData.CURRENT_USER)} />
             </View>
         );
      }
