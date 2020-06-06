@@ -7,6 +7,7 @@ import CalendarListComponent from './src/components/calendar/CalendarListCompone
 import AgendaComponent from './src/components/calendar/AgendaComponent'
 import GroupComponent from './src/components/group/GroupComponent';
 import JoinGroupComponent from './src/components/group/joinGroupComponent';
+import HomeComponent from './src/components/home/homeComponent';
 //change to commit
 
 const Stack = createStackNavigator();
@@ -27,6 +28,7 @@ function App() {
     return (
     <NavigationContainer linking = {deepLinking}>
             <Stack.Navigator>
+                <Stack.Screen name="Home"  component={HomeComponent} />
                 <Stack.Screen name="Login"  component={LoginController} />
                 <Stack.Screen name="CreateGroupComponent" component={GroupComponent} />
                 <Stack.Screen name="JoinGroupComponent" component={JoinGroupComponent} />
