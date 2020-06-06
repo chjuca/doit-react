@@ -15,21 +15,21 @@ const Stack = createStackNavigator();
 function App() {
     const deepLinking = {
         prefixes: ['https://demoapp.com'],
-        config :{
-            JoinGroupComponent:{
+        config: {
+            JoinGroupComponent: {
                 path: 'JoinGroup/:name/:groupId',
                 params: {
                     name: '',
                     groupId: null
+                }
             }
         }
     }
-}
     return (
-    <NavigationContainer linking = {deepLinking}>
+        <NavigationContainer linking={deepLinking}>
             <Stack.Navigator>
-                <Stack.Screen name="Home"  component={HomeComponent} />
-                <Stack.Screen name="Login"  component={LoginController} />
+                <Stack.Screen name="Login" component={LoginController} />
+                <Stack.Screen name="Home" component={HomeComponent} />
                 <Stack.Screen name="CreateGroupComponent" component={GroupComponent} />
                 <Stack.Screen name="JoinGroupComponent" component={JoinGroupComponent} />
                 <Stack.Screen name="AgendaComponent" component={AgendaComponent} />
