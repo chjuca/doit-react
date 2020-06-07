@@ -1,20 +1,33 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Image, Text, TouchableHighlight } from 'react-native';
+import { View, StyleSheet, Image, Text, TouchableHighlight, BackHandler } from 'react-native';
 import LoginController from "../../../LoginController";
 import StaticData from '../../../StaticData';
 
 export default class HomeComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            name: ''
+        }
     }
     loginServices = new LoginController();
 
-    async componentDidMount(){
+    async componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
         StaticData.CURRENT_USER = await this.loginServices.getCurrentUser();
-        if(StaticData.CURRENT_USER === undefined){
+        if (StaticData.CURRENT_USER != undefined) {
+            this.setState({ name: StaticData.CURRENT_USER.name })
+        }else{
             this.props.navigation.navigate('Login')
         }
+    }
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.onBackButtonPressed);
+    }
+
+    onBackButtonPressed() {
+        BackHandler.exitApp();
+        return true;
     }
 
     render() {
@@ -22,7 +35,8 @@ export default class HomeComponent extends Component {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.welcome}>¡Bienvenido!</Text>
-                    <Text style={styles.data}>¡Bienvenido!</Text>
+                    <Text></Text>
+                    <Text style={styles.data}>{'\t\t' + this.state.name}</Text>
                 </View>
                 <View style={styles.containerRow}>
                     <View style={styles.containerChild}>

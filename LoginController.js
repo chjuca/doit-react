@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from "react";
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Image, AsyncStorage } from 'react-native';
-import { Header, LearnMoreLinks, Colors } from 'react-native/Libraries/NewAppScreen';
+import React, { Component } from "react";
+import { StyleSheet, View, Text, AsyncStorage, BackHandler } from 'react-native';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 import firebase from 'react-native-firebase'
 import StaticData from './StaticData';
@@ -15,7 +14,6 @@ export default class LoginController extends Component {
     }
   }
 
-
   componentDidMount() {
     GoogleSignin.configure({
       webClientId: '696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com',
@@ -23,6 +21,16 @@ export default class LoginController extends Component {
       hostedDomain: '',
       forceConsentPrompt: true,
     });
+    BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.onBackButtonPressed);
+  }
+
+  onBackButtonPressed() {
+    BackHandler.exitApp();
+    return true;
   }
 
   getCurrentUser = async () => {
