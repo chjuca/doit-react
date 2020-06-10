@@ -1,33 +1,35 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator} from '@react-navigation/stack';
 import LoginController from './LoginController';
 import CalendarListComponent from './src/components/calendar/CalendarListComponent';
 import AgendaComponent from './src/components/calendar/AgendaComponent'
 import GroupComponent from './src/components/group/GroupComponent';
 import JoinGroupComponent from './src/components/group/joinGroupComponent';
-//change to commit
+import HomeComponent from './src/components/home/homeComponent';
+//change to commit Login
 
 const Stack = createStackNavigator();
 
 function App() {
     const deepLinking = {
         prefixes: ['https://demoapp.com'],
-        config :{
-            JoinGroupComponent:{
+        config: {
+            JoinGroupComponent: {
                 path: 'JoinGroup/:name/:groupId',
                 params: {
                     name: '',
                     groupId: null
+                }
             }
         }
     }
-}
     return (
-    <NavigationContainer linking = {deepLinking}>
+        <NavigationContainer linking={deepLinking}>
             <Stack.Navigator>
-                <Stack.Screen name="Login"  component={LoginController} />
+                <Stack.Screen name="Home" component={HomeComponent} options = {{headerShown: false}} />
+                <Stack.Screen name="Login" component={LoginController} options = {{headerShown: false}} />
                 <Stack.Screen name="CreateGroupComponent" component={GroupComponent} />
                 <Stack.Screen name="JoinGroupComponent" component={JoinGroupComponent} />
                 <Stack.Screen name="AgendaComponent" component={AgendaComponent} />

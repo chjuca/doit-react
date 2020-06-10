@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from "react";
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Image, AsyncStorage } from 'react-native';
-import { Header, LearnMoreLinks, Colors } from 'react-native/Libraries/NewAppScreen';
+import React, { Component } from "react";
+import { StyleSheet, View, Text, AsyncStorage, BackHandler } from 'react-native';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 import firebase from 'react-native-firebase'
 import StaticData from './StaticData';
@@ -15,7 +14,6 @@ export default class LoginController extends Component {
     }
   }
 
-
   componentDidMount() {
     GoogleSignin.configure({
       webClientId: '696883679209-rs50mv46cu9dvce4tnh3mcph0jq5383r.apps.googleusercontent.com',
@@ -23,6 +21,16 @@ export default class LoginController extends Component {
       hostedDomain: '',
       forceConsentPrompt: true,
     });
+    BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.onBackButtonPressed);
+  }
+
+  onBackButtonPressed() {
+    BackHandler.exitApp();
+    return true;
   }
 
   getCurrentUser = async () => {
@@ -57,6 +65,9 @@ export default class LoginController extends Component {
       // login with credential
       StaticData.CURRENT_USER = userInfo;
       this._storeData(StaticData.CURRENT_USER);
+      if (StaticData.CURRENT_USER !== undefined) {
+        this.props.navigation.navigate('Home')
+      }
     } catch (error) {
       console.log(error)
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -84,137 +95,30 @@ export default class LoginController extends Component {
 
   render() {
     return (
-      <Fragment>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}>
-            <Header />
-            {global.HermesInternal == null ? null : (
-              <View style={styles.engine}>
-                <Text style={styles.footer}>Engine: Hermes</Text>
-              </View>
-            )}
-            <View style={styles.body}>
-              <View style={styles.sectionContainer}>
-                <GoogleSigninButton
-                  style={{ width: 192, height: 48 }}
-                  size={GoogleSigninButton.Size.Wide}
-                  color={GoogleSigninButton.Color.Dark}
-                  onPress={this.firebaseGoogleLogin}
-                  disabled={this.state.isSigninInProgress} />
-              </View>
-              <View style={styles.buttonContainer}>
-                {!this.state.loggedIn && <Text>You are currently logged out</Text>}
-                {this.state.loggedIn && <Button onPress={this.signOut}
-                  title="Signout"
-                  color="#841584">
-                </Button>}
-                <Button title='Group' onPress={() => this.props.navigation.navigate('CreateGroupComponent')} />
-              </View>
-
-              {!this.state.loggedIn && <LearnMoreLinks />}
-              {this.state.loggedIn && <View>
-                <View style={styles.listHeader}>
-                  <Text>User Info</Text>
-                </View>
-                <View style={styles.dp}>
-                  <Image
-                    style={{ width: 100, height: 100, borderRadius: 50 }}
-                    source={{ uri: this.state.userInfo && this.state.userInfo.user && this.state.userInfo.user.photo }}
-                  />
-                </View>
-                <View style={styles.detailContainer}>
-                  <Text style={styles.title}>Name</Text>
-                  <Text style={styles.message}>{this.state.userInfo && this.state.userInfo.user && this.state.userInfo.user.name}</Text>
-                </View>
-                <View style={styles.detailContainer}>
-                  <Text style={styles.title}>Email</Text>
-                  <Text style={styles.message}>{this.state.userInfo && this.state.userInfo.user && this.state.userInfo.user.email}</Text>
-                </View>
-                <View style={styles.detailContainer}>
-                  <Text style={styles.title}>ID</Text>
-                  <Text style={styles.message}>{this.state.userInfo && this.state.userInfo.user && this.state.userInfo.user.id}</Text>
-                </View>
-              </View>}
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </Fragment>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>¡Bienvenido!</Text>
+        <GoogleSigninButton
+          style={{ width: 192, height: 48 }}
+          size={GoogleSigninButton.Size.Wide}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={this.firebaseGoogleLogin}
+          disabled={this.state.isSigninInProgress} />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column'
   },
-  listHeader: {
-    backgroundColor: '#eee',
-    color: "#222",
-    height: 44,
-    padding: 12
-  },
-  detailContainer: {
-    paddingHorizontal: 20
-  },
-  title: {
-    fontSize: 18,
+  welcome: {
+    flex: 0.45,
+    fontFamily: 'Roboto',
     fontWeight: 'bold',
-    paddingTop: 10
-  },
-  message: {
-    fontSize: 14,
-    paddingBottom: 15,
-    borderBottomColor: "#ccc",
-    borderBottomWidth: 1
-  },
-  dp: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-    flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-    flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  buttonContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-    flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+    fontSize: 40
+  }
 });
