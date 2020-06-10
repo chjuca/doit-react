@@ -8,7 +8,7 @@ import AgendaComponent from './src/components/calendar/AgendaComponent'
 import GroupComponent from './src/components/group/GroupComponent';
 import JoinGroupComponent from './src/components/group/joinGroupComponent';
 import HomeComponent from './src/components/home/homeComponent';
-//change to commit
+//change to commit Login
 
 const Stack = createStackNavigator();
 
