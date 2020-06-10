@@ -62,6 +62,7 @@ export default class LoginController extends Component {
       this.getCurrentUser();
       // create a new firebase credential with the token
       const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
+      const firebaseUserCredential = await firebase.auth().signInWithCredential(credential);
       // login with credential
       StaticData.CURRENT_USER = userInfo;
       this._storeData(StaticData.CURRENT_USER);
