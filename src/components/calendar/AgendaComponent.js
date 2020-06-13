@@ -3,12 +3,24 @@
 // { name: 'Control de Lectura ', hour: '10:00AM -10:45AM', description: 'lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit', image: 'CL', color: '#039BE5', date: '2020-05-25' }],
 // { name: 'Exposicion Arquitectura', hour: '10:00AM -10:45AM', description: 'lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit', image: 'EA', color: '#33B679', date: '2020-05-23'}
 import React, { Component } from 'react';
-import { Agenda } from 'react-native-calendars';
+import { Agenda, Calendar } from 'react-native-calendars';
 import EventComponent from '../event/EventComponent'
 import EventEmptyComponent from '../event/EventEmptyComponent'
 import EventService from '../../services/event.services';
 import LoginController from '../../../LoginController';
 import StaticData from '../../../StaticData';
+import {LocaleConfig} from 'react-native-calendars';
+
+
+LocaleConfig.locales['fr'] = {
+    monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+    monthNamesShort: ['Ene.','Feb.','Mar.','Abr.','May.','Jun.','Jul.','Ago.','Sept.','Oct.','Nov.','Dic.'],
+    dayNames: ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'],
+    dayNamesShort: ['Dom.','Lun.','Mar.','Mier.','Jue.','Vie.','Sab.'],
+    today: 'Hoy/hoy'
+  };
+  LocaleConfig.defaultLocale = 'fr';
+
 
 export default class AgendaComponent extends Component {
 
