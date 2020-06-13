@@ -5,10 +5,10 @@
 import React, { Component } from 'react';
 import { Agenda } from 'react-native-calendars';
 import EventComponent from '../event/EventComponent'
+import EventEmptyComponent from '../event/EventEmptyComponent'
 import EventService from '../../services/event.services';
 import LoginController from '../../../LoginController';
 import StaticData from '../../../StaticData';
-import Event from '../../models/event.interface';
 
 export default class AgendaComponent extends Component {
 
@@ -46,6 +46,7 @@ export default class AgendaComponent extends Component {
             <Agenda
                 items={this.state.items}
                 renderItem={(item, firstItemInDay) => { return (<EventComponent item={item} />); }}
+                renderEmptyData={() => {return (<EventEmptyComponent />);}}
                 onDayPress={(day) => { console.log('day pressed') }}
             />
         )
