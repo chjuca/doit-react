@@ -1,5 +1,6 @@
 import firebase from '../../Firebase'
 import LoginController from '../../LoginController';
+import StaticData from '../../StaticData';
 
 export default class EventService {
 
@@ -22,8 +23,9 @@ export default class EventService {
     }
 
     async getEvents() {
+        StaticData.CURRENT_USER = await this.login.getCurrentUser();
         const ref = this.databaseService.ref('events');
-        await ref.once('value', (snapshot) => {
+        await ref.orderByChild('email').equalTo(StaticData.CURRENT_USER.email).once('value', (snapshot) => {
             this.events = snapshot.val();
         });
         return Object.values(this.events);

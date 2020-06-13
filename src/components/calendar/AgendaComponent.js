@@ -9,18 +9,6 @@ import EventEmptyComponent from '../event/EventEmptyComponent'
 import EventService from '../../services/event.services';
 import LoginController from '../../../LoginController';
 import StaticData from '../../../StaticData';
-import {LocaleConfig} from 'react-native-calendars';
-
-
-LocaleConfig.locales['fr'] = {
-    monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
-    monthNamesShort: ['Ene.','Feb.','Mar.','Abr.','May.','Jun.','Jul.','Ago.','Sept.','Oct.','Nov.','Dic.'],
-    dayNames: ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'],
-    dayNamesShort: ['Dom.','Lun.','Mar.','Mier.','Jue.','Vie.','Sab.'],
-    today: 'Hoy/hoy'
-  };
-  LocaleConfig.defaultLocale = 'fr';
-
 
 export default class AgendaComponent extends Component {
 
