@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-#Sat Jun 13 18:07:58 ECT 2020
+#Sun Jun 14 11:36:25 ECT 2020
 base.0=/home/chjuca/FIS/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-=======
-#Sun Jun 14 10:55:18 ECT 2020
-base.0=/home/carloscastillo/Escritorio/6to Ciclo/FUNDAMENTOS DE INGENIERIA DE SOFTWARE/Proyecto/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
->>>>>>> b5f3c33fda9f2e16ef02ddf0c4637eea7e15a132
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/carloscastillo/Escritorio/6to Ciclo/FUNDAMENTOS DE INGENIERIA DE SOFTWARE/Proyecto/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex
+base.1=/home/chjuca/FIS/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/carloscastillo/Escritorio/6to Ciclo/FUNDAMENTOS DE INGENIERIA DE SOFTWARE/Proyecto/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
+            "outputFile": "/home/chjuca/FIS/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/home/carloscastillo/.gradle/caches/transforms-2/files-2.1/dd7270d65a1febb6e833ea6a18d68fce/material-1.1.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/dd7270d65a1febb6e833ea6a18d68fce/material-1.1.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
