@@ -6,36 +6,39 @@ export default class GroupService {
     login = new LoginController();
     groups = [];
 
-    async addGroup(group) {
-        const ref = this.databaseService.ref('groups').child(group.id);
-        await ref.set(group);
+    async addGroup(group, chat) {
+        const refGroup = this.databaseService.ref('groups').child(group.id);
+        await refGroup.set(group).then(async () => {
+            const refChats = this.databaseService.ref('chats').child(group.id);
+            await refChats.set(chat);
+        })
     }
 
-    async validateMember(groupId, user){
+    async validateMember(groupId, user) {
         const ref = this.databaseService.ref('groups');
-        ref.orderByChild("id").equalTo(groupId).once("value",snapshot => {
-            if (snapshot.exists()){
+        ref.orderByChild("id").equalTo(groupId).once("value", snapshot => {
+            if (snapshot.exists()) {
                 console.log('grupo existe');
-                this.isJoinedUser(groupId,user);
-            }else{
+                this.isJoinedUser(groupId, user);
+            } else {
                 console.log('grupo NO existe, por favor no insista :)');
             }
         });
     }
 
-    async isJoinedUser(groupId, user){
+    async isJoinedUser(groupId, user) {
         const ref = this.databaseService.ref('groups').child(groupId).child('members');
-        ref.orderByChild("id").equalTo(user.id).once("value",snapshot => {
-            if (snapshot.exists()){
+        ref.orderByChild("id").equalTo(user.id).once("value", snapshot => {
+            if (snapshot.exists()) {
                 console.log('Usuario Registrado');
 
-            }else{
+            } else {
                 this.addMember(groupId, user);
             }
         });
     }
 
-    async addMember(groupId, user){
+    async addMember(groupId, user) {
         const ref = this.databaseService.ref('groups').child(groupId).child('members');
         await ref.push(
             {
