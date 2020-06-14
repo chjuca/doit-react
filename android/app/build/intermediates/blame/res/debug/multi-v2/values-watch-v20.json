@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/carloscastillo/Escritorio/6to Ciclo/FUNDAMENTOS DE INGENIERIA DE SOFTWARE/Proyecto/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/home/chjuca/FIS/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/carloscastillo/.gradle/caches/transforms-2/files-2.1/021161095b79e3d2fdb8ba1de84df439/appcompat-1.1.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/021161095b79e3d2fdb8ba1de84df439/appcompat-1.1.0/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/carloscastillo/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/res/values-watch-v20/values.xml",
+                    "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/41ad41a7b50e72b3fabb0e7d4a7a871d/play-services-auth-17.0.0/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
