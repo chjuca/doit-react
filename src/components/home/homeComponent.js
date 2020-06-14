@@ -46,7 +46,7 @@ export default class HomeComponent extends Component {
                         <Text>Tareas</Text>
                     </View>
                     <View style={styles.containerChild}>
-                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => console.log('chat')}>
+                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => this.props.navigation.navigate('GroupChatList')}>
                             <Image style={styles.image} source={require('../../assets/icon_chat.png')} />
                         </TouchableHighlight>
                         <Text>Chat</Text>
