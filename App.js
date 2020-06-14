@@ -9,7 +9,7 @@ import GroupComponent from './src/components/group/GroupComponent';
 import JoinGroupComponent from './src/components/group/joinGroupComponent';
 import HomeComponent from './src/components/home/homeComponent';
 import GroupChatListComponent from './src/components/groupChatList/GroupChatListComponent';
-//change to commit Login
+//change to commit group
 
 const Stack = createStackNavigator();
 
