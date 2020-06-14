@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, TextInput, Button, StyleSheet, Share, Linking } from 'react-native';
 import Group from '../../models/group.interface';
+import Chat from '../../models/chat.interface';
 import StaticData from '../../../StaticData';
 import GroupServices from '../../services/group.service';
 import LoginController from "../../../LoginController";
@@ -23,7 +24,7 @@ export default class GroupComponent extends Component {
     groupServices = new GroupServices();
     loginServices = new LoginController();
 
-    async componentDidMount(){
+    async componentDidMount() {
         StaticData.CURRENT_USER = await this.loginServices.getCurrentUser();
         console.log(StaticData.CURRENT_USER.name);
     }
@@ -44,23 +45,30 @@ export default class GroupComponent extends Component {
             role: "ADMIN"
         })
         groupObj.members = members;
-        this.groupServices.addGroup(groupObj);
-        this.setState({isclicked: false})
+
+        let chatObj = Object.create(Chat);
+        chatObj.groupId = id;
+        chatObj.groupName = groupObj.name;
+        chatObj.lastMessage = 'Aun no hay ningun mensaje';
+        const hour = new Date().getHours() + ":" + new Date().getMinutes() ;
+        chatObj.lastMessageTime = hour.toString();
+        this.groupServices.addGroup(groupObj, chatObj);
+        this.setState({ isclicked: false })
     }
 
-    shareLinkWhatsapp(){
-        const nameGroup = this.state.Group.name.replace(/ /g,"_");
-        const message = 'DoIt- Invitacion para el Grupo\n https://demoapp.com/JoinGroup/'+nameGroup+'/' + this.idGroup;
+    shareLinkWhatsapp() {
+        const nameGroup = this.state.Group.name.replace(/ /g, "_");
+        const message = 'DoIt- Invitacion para el Grupo\n https://demoapp.com/JoinGroup/' + nameGroup + '/' + this.idGroup;
         Linking.openURL('whatsapp://send?text=' + message);
     }
-    shareLinkSocial(){
-        const nameGroup = this.state.Group.name.replace(/ /g,"_")
+    shareLinkSocial() {
+        const nameGroup = this.state.Group.name.replace(/ /g, "_")
         const shareOptions = {
             title: 'Title',
-            message: 'DoIt- Invitacion para el Grupo\n https://demoapp.com/JoinGroup/'+nameGroup+'/' + this.idGroup,
+            message: 'DoIt- Invitacion para el Grupo\n https://demoapp.com/JoinGroup/' + nameGroup + '/' + this.idGroup,
             subject: 'Invitacion para el Grupo'
-          };
-          Share.share(shareOptions);
+        };
+        Share.share(shareOptions);
     }
 
     render() {
@@ -71,17 +79,17 @@ export default class GroupComponent extends Component {
                         const Group = Object.assign({}, this.state.Group, { name });
                         this.setState({ Group })
                     }
-                }
+                    }
                 />
                 <TextInput placeholder='Descripción'
                     onChangeText={(description) => {
-                        const Group = Object.assign({}, this.state.Group, { description});
+                        const Group = Object.assign({}, this.state.Group, { description });
                         this.setState({ Group })
                     }
-                } />
+                    } />
                 <Button title="Agregar" onPress={() => this.addGroup()} />
-                <Button disabled={this.state.isclicked} title = "Compartir Whatsapp" onPress={() => this.shareLinkWhatsapp()} />
-                <Button disabled={this.state.isclicked} title = "Compartir" onPress={() => this.shareLinkSocial()} />
+                <Button disabled={this.state.isclicked} title="Compartir Whatsapp" onPress={() => this.shareLinkWhatsapp()} />
+                <Button disabled={this.state.isclicked} title="Compartir" onPress={() => this.shareLinkSocial()} />
             </View>
         );
     }

@@ -46,7 +46,7 @@ export default class HomeComponent extends Component {
                         <Text>Tareas</Text>
                     </View>
                     <View style={styles.containerChild}>
-                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => console.log('chat')}>
+                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => this.props.navigation.navigate('GroupChatList')}>
                             <Image style={styles.image} source={require('../../assets/icon_chat.png')} />
                         </TouchableHighlight>
                         <Text>Chat</Text>
@@ -54,7 +54,7 @@ export default class HomeComponent extends Component {
                 </View>
                 <View style={styles.containerRow}>
                     <View style={styles.containerChild}>
-                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => console.log('grupos')}>
+                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => this.props.navigation.navigate('CreateGroupComponent')}>
                             <Image style={styles.image} source={require('../../assets/icon_group.png')} />
                         </TouchableHighlight>
                         <Text>Grupos</Text>

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/chjuca/FIS/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/home/carloscastillo/Escritorio/6to Ciclo/FUNDAMENTOS DE INGENIERIA DE SOFTWARE/Proyecto/doit-react/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/dd7270d65a1febb6e833ea6a18d68fce/material-1.1.0/res/values-land/values-land.xml",
+                    "source": "/home/carloscastillo/.gradle/caches/transforms-2/files-2.1/dd7270d65a1febb6e833ea6a18d68fce/material-1.1.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/chjuca/.gradle/caches/transforms-2/files-2.1/021161095b79e3d2fdb8ba1de84df439/appcompat-1.1.0/res/values-land/values-land.xml",
+                    "source": "/home/carloscastillo/.gradle/caches/transforms-2/files-2.1/021161095b79e3d2fdb8ba1de84df439/appcompat-1.1.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
