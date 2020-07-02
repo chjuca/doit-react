@@ -50,8 +50,15 @@ export default class GroupComponent extends Component {
         chatObj.groupId = id;
         chatObj.groupName = groupObj.name;
         chatObj.lastMessage = 'Aun no hay ningun mensaje';
-        const hour = new Date().getHours() + ":" + new Date().getMinutes() ;
-        chatObj.lastMessageTime = hour.toString();
+        let hour = new Date().getHours();
+        let minute = new Date().getMinutes();
+        if(hour<10){
+            hour = '0' + hour;
+        }
+        if(minute<10){
+            minute = '0'+ minute;
+        }
+        chatObj.lastMessageTime = hour + ':' + minute;
         this.groupServices.addGroup(groupObj, chatObj);
         this.setState({ isclicked: false })
     }

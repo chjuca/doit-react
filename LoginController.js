@@ -53,6 +53,16 @@ export default class LoginController extends Component {
     }
   };
 
+  _removeData = async () => {
+    try {
+      await AsyncStorage.removeItem('currentUser')
+      return true;
+    }
+    catch (exception) {
+      return false;
+    }
+  };
+
   firebaseGoogleLogin = async () => {
     try {
       // add any configuration settings here:
@@ -85,10 +95,11 @@ export default class LoginController extends Component {
 
   signOut = async () => {
     try {
+      this.componentDidMount();
       await GoogleSignin.revokeAccess();
       await GoogleSignin.signOut();
-      this.setState({ user: null, loggedIn: false }); // Remember to remove the user from your app's state as well
       StaticData.CURRENT_USER = null;
+      this._removeData();
     } catch (error) {
       console.error(error);
     }

@@ -60,7 +60,7 @@ export default class HomeComponent extends Component {
                         <Text>Grupos</Text>
                     </View>
                     <View style={styles.containerChild}>
-                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => console.log('perfil')}>
+                        <TouchableHighlight underlayColor='#E0ECFE' onPress={() => this.props.navigation.navigate('ProfileComponent')}>
                             <Image style={styles.image} source={require('../../assets/icon_user.png')} />
                         </TouchableHighlight>
                         <Text>Perfil</Text>
@@ -115,6 +115,7 @@ const styles = StyleSheet.create({
     },
     data: {
         fontFamily: 'Roboto',
-        fontSize: 25
+        fontSize: 25,
+        fontStyle: "italic"
     }
 })

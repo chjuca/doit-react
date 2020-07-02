@@ -9,6 +9,7 @@ import GroupComponent from './src/components/group/GroupComponent';
 import JoinGroupComponent from './src/components/group/joinGroupComponent';
 import HomeComponent from './src/components/home/homeComponent';
 import GroupChatListComponent from './src/components/groupChatList/GroupChatListComponent';
+import ProfileComponent from './src/components/profile/profileComponent';
 //change to commit group
 
 const Stack = createStackNavigator();
@@ -32,6 +33,7 @@ function App() {
                 <Stack.Screen name="Home" component={HomeComponent} options = {{headerShown: false}} />
                 <Stack.Screen name="Login" component={LoginController} options = {{headerShown: false}} />
                 <Stack.Screen name="CreateGroupComponent" component={GroupComponent} />
+                <Stack.Screen name="ProfileComponent" component={ProfileComponent} />
                 <Stack.Screen name="JoinGroupComponent" component={JoinGroupComponent} />
                 <Stack.Screen name="AgendaComponent" component={AgendaComponent} />
                 <Stack.Screen name="CalendarList" component={CalendarListComponent} />
