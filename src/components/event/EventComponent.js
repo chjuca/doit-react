@@ -12,14 +12,13 @@ export default class EventComponent extends Component {
     render() {
         return (
             <View style={styles.cont}>
+                <Text style={styles.tittle}>EVENTOS</Text>
                 <Text style={styles.subtittle}>Nombre</Text>
                 <TextInput style={styles.inputBox} id='name'></TextInput>
                 <Text style={styles.subtittle} >Descripción</Text>
                 <TextInput style={styles.inputBox} id='description'></TextInput>
 
             </View>
-            
-            
            /* <View style={styles.container}>
                 <View style={styles.containerRight}>
                     <Text style={styles.hour}>{this.props.item.hourStart} - {this.props.item.hourEnd} </Text>
@@ -69,8 +68,13 @@ const styles = StyleSheet.create({
         fontSize: 18,
         alignSelf: 'flex-start',
         marginLeft: 58
-    }
-    ,
+    },
+    tittle: {
+        fontFamily: 'Roboto',
+        fontWeight: 'bold',
+        fontSize: 28,
+        alignSelf: 'center',
+    },
     name: {
         fontFamily: 'Roboto',
         fontWeight: 'bold',

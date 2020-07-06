@@ -30,7 +30,7 @@ function App() {
     return (
         <NavigationContainer linking={deepLinking}>
             <Stack.Navigator>
-                <Stack.Screen name="Events" component={EventComponent}/> 
+                <Stack.Screen name="Events" component={EventComponent} options = {{headerShown: false}} /> 
                 <Stack.Screen name="Home" component={HomeComponent} options = {{headerShown: false}} />
                 <Stack.Screen name="Login" component={LoginController} options = {{headerShown: false}} />
                 <Stack.Screen name="CreateGroupComponent" component={GroupComponent} />
