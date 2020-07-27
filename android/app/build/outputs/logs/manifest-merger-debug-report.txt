@@ -10,6 +10,7 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] C:\Users\isral\
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] C:\Users\isral\.gradle\caches\transforms-2\files-2.1\814b836332ba94b394159e08b343749d\flipper-fresco-plugin-0.33.1\AndroidManifest.xml:8:1-15:12
 MERGED from [:react-native-firebase] D:\Archivos HDD\Codops\doit-react\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\isral\.gradle\caches\transforms-2\files-2.1\c4f03dea245ae4fedb822d564c98c0e9\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [:react-native-community_datetimepicker] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-community_masked-view] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] D:\Archivos HDD\Codops\doit-react\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-google-signin] D:\Archivos HDD\Codops\doit-react\node_modules\react-native-google-signin\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
@@ -135,6 +136,8 @@ MERGED from D:\Archivos HDD\Codops\doit-react\android\app\src\main\AndroidManife
 MERGED from D:\Archivos HDD\Codops\doit-react\android\app\src\main\AndroidManifest.xml:6:5-32:19
 MERGED from [:react-native-firebase] D:\Archivos HDD\Codops\doit-react\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-21:19
 MERGED from [:react-native-firebase] D:\Archivos HDD\Codops\doit-react\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-21:19
+MERGED from [:react-native-community_datetimepicker] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
+MERGED from [:react-native-community_datetimepicker] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.62.2] C:\Users\isral\.gradle\caches\transforms-2\files-2.1\526f7bb085e595293231d2070ce5bd7f\jetified-react-native-0.62.2\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.62.2] C:\Users\isral\.gradle\caches\transforms-2\files-2.1\526f7bb085e595293231d2070ce5bd7f\jetified-react-native-0.62.2\AndroidManifest.xml:11:5-20
 MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\isral\.gradle\caches\transforms-2\files-2.1\bebd57aced9b799a52b2ddaf594c20e9\jetified-firebase-auth-17.0.0\AndroidManifest.xml:23:5-40:19
@@ -271,6 +274,8 @@ MERGED from [:react-native-firebase] D:\Archivos HDD\Codops\doit-react\node_modu
 MERGED from [:react-native-firebase] D:\Archivos HDD\Codops\doit-react\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\isral\.gradle\caches\transforms-2\files-2.1\c4f03dea245ae4fedb822d564c98c0e9\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\isral\.gradle\caches\transforms-2\files-2.1\c4f03dea245ae4fedb822d564c98c0e9\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [:react-native-community_datetimepicker] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-community_datetimepicker] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-community_masked-view] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] D:\Archivos HDD\Codops\doit-react\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] D:\Archivos HDD\Codops\doit-react\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41

@@ -1,4 +1,4 @@
-#Sat Jul 04 20:30:28 COT 2020
+#Sun Jul 26 15:19:23 COT 2020
 base.0=D\:\\Archivos HDD\\Codops\\doit-react\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex
