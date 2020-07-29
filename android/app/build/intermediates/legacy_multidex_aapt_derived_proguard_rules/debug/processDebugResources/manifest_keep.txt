@@ -1,4 +1,4 @@
-# Referenced at /home/chjuca/FIS/doit-react/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:19
+# Referenced at C:\Users\Usuario\Desktop\UTPL\UTPL 6 ciclo\Fundamentos de software\Proyecto\DOIT\doit-react\android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:19
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at /home/chjuca/FIS/doit-react/android/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:19
+# Referenced at C:\Users\Usuario\Desktop\UTPL\UTPL 6 ciclo\Fundamentos de software\Proyecto\DOIT\doit-react\android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:19
 -keep class com.doit.utpl.MainApplication { <init>(); }

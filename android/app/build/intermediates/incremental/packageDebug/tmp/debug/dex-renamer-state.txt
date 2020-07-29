@@ -1,7 +1,7 @@
-#Sun Jun 14 11:36:25 ECT 2020
-base.0=/home/chjuca/FIS/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Mon Jul 27 17:56:22 COT 2020
+base.0=C\:\\Users\\Usuario\\Desktop\\UTPL\\UTPL 6 ciclo\\Fundamentos de software\\Proyecto\\DOIT\\doit-react\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/chjuca/FIS/doit-react/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes2.dex
+base.1=C\:\\Users\\Usuario\\Desktop\\UTPL\\UTPL 6 ciclo\\Fundamentos de software\\Proyecto\\DOIT\\doit-react\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes2.dex

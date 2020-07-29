@@ -41,7 +41,7 @@ export default class GroupChatListComponent extends Component{
             <FlatList 
                 data = { this.state.groups }
                 renderItem = { ({item}) => (
-                    <ListItem onPress = { () => console.log(item)} // Call Gerson's screen
+                    <ListItem onPress = { () => this.props.navigation.navigate('ChatComponent')} // Call Gerson's screen
                     roundAvatar
                     title={item.groupName}
                     titleStyle={{ 
