@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import LoginController from './LoginController';
 import CalendarListComponent from './src/components/calendar/CalendarListComponent';
 import AgendaComponent from './src/components/calendar/AgendaComponent'
@@ -11,6 +11,7 @@ import HomeComponent from './src/components/home/homeComponent';
 import GroupChatListComponent from './src/components/groupChatList/GroupChatListComponent';
 import EventComponent from './src/components/event/EventComponent';
 import EditGroupComponent from './src/components/editGroup/EditGroupComponent';
+import CreateEventComponent from './src/components/event/CreateEventComponent';
 //change to commit group
 
 const Stack = createStackNavigator();
@@ -31,10 +32,11 @@ function App() {
     return (
         <NavigationContainer linking={deepLinking}>
             <Stack.Navigator>
-                <Stack.Screen name="Events" component={EventComponent} options = {{headerShown: false}} />
-                <Stack.Screen name="EditGroup" component={EditGroupComponent} options = {{headerShown: false}} />  
-                <Stack.Screen name="Home" component={HomeComponent} options = {{headerShown: false}} />
-                <Stack.Screen name="Login" component={LoginController} options = {{headerShown: false}} />
+                <Stack.Screen name="CreateEvents" component={CreateEventComponent} options={{ headerShown: false }} />
+                <Stack.Screen name="Home" component={HomeComponent} options={{ headerShown: false }} />
+                <Stack.Screen name="EditGroup" component={EditGroupComponent} options={{ headerShown: false }} />
+                <Stack.Screen name="Events" component={EventComponent} options={{ headerShown: false }} />
+                <Stack.Screen name="Login" component={LoginController} options={{ headerShown: false }} />
                 <Stack.Screen name="CreateGroupComponent" component={GroupComponent} />
                 <Stack.Screen name="JoinGroupComponent" component={JoinGroupComponent} />
                 <Stack.Screen name="AgendaComponent" component={AgendaComponent} />
