@@ -6,4 +6,5 @@ export interface Message {
         avatar: any;
     },
     text: string;
+    createdAt: Date;
 }

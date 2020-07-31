@@ -22,7 +22,7 @@ class ChatComponent extends Component {
                 </View>
             </View>,
             <Chats key="content" />,
-            // <footer>(c)stackoverflow</footer>
+           
         ]
     }
 }
@@ -38,9 +38,9 @@ const styles = StyleSheet.create({
     title: {
         backgroundColor: '#B8DBEB',
         flex: 0.13,
-        //alignItems: 'center',
+    
         flexDirection: "column",
-        //padding: 10
+        
 
     },
     containerRow: {

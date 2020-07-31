@@ -22,7 +22,7 @@ const Chats = () => {
   }, []);
 
   const onSend = (newMessages = []) => {
-    setMessages((prevMessages) => GiftedChat.append(prevMessages, newMessages));
+    setMessages((prevMessages) => GiftedChat.append(prevMessages, newMessages));  
   };
 
 
@@ -40,6 +40,7 @@ const Chats = () => {
           name: 'Carlos Castillo',
           avatar: 'https://scontent.fgye4-1.fna.fbcdn.net/v/t1.0-1/23621647_1574745289268698_75971956595828836_n.jpg?_nc_cat=105&_nc_sid=dbb9e7&_nc_ohc=aty_UkXJz58AX_91JL9&_nc_ht=scontent.fgye4-1.fna&oh=8ab6c6babb4496d7cc6c9f27cadec50c&oe=5F42415D',
         }}
+
         alignTop
         alwaysShowSend
         scrollToBottom

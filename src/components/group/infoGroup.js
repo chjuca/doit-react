@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableHighlight, Image } from 'react-native';
 import { FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
@@ -37,10 +37,10 @@ export default class InfoGroupComponent extends Component {
                     role: 'ADMIN'
                 }
             ]
-               
-               
-                
-            
+
+
+
+
 
         };
     }
@@ -54,61 +54,88 @@ export default class InfoGroupComponent extends Component {
                     </View>
                 </View>
                 <View style={styles.containerColumn}>
-                <View style={styles.containerChild2}>
+                    <View style={styles.containerChild2}>
                         <Text style={styles.secondtitle}>Descripción</Text>
 
                         <View style={styles.descripcion}>
                             <Text>Este chat es creado para tal cosa</Text>
                         </View>
-                        </View>
-                        <View style={styles.containerChild3}>
+                    </View>
+                    <View style={styles.containerChild3}>
                         <Text style={styles.secondtitle}>Enlace invitacion:</Text>
 
                         <View style={styles.invitacion}>
-                            <Text>zelda</Text>
+                            <View style={styles.containerRow}>
+                                <View style={styles.containerChildRowshare}>
+                                    <TouchableHighlight underlayColor='#E0ECFE' 
+                                        
+                                        >
+                                        <Image style={styles.image} source={require('../../assets/share.png')} />
+                                    </TouchableHighlight>
+                                </View>
+                                <View style={styles.containerChildRow}>
+                                    <Text>//Enlacealgrupo</Text>
+                                </View>
+                            </View>
                         </View>
-                        </View>
-                    
-               
-                {/* cambiar estilos */}
-                <View style={styles.containerChildM}>
-                <Text style={styles.secondtitle}>Miembros:</Text>
-                <FlatList 
-                data = { this.state.members }
-                renderItem = { ({item}) => (
-                    
+                    </View>
 
-                    <ListItem style={styles.miembros} 
-                    // onPress = { () => this.props.navigation.navigate('')} 
-                    
-                    // roundAvatar
-                    title={item.name}
-                    titleStyle={{ 
-                        color: 'black', 
-                        fontWeight: 'bold' 
-                    }}
-                    subtitle={item.email}
-                    leftAvatar={{
-                        size: 35,
-                        overlayContainerStyle:{backgroundColor: 'gray'},
-                        //image: item.members.photo
-                      }}
-                    
-                   
-                    />
-                )}
-                keyExtractor={item => item.id}
-            /> 
-                </View>
+
+                    <View style={styles.containerChildM}>
+                        <Text style={styles.secondtitle}>Miembros:</Text>
+                        <FlatList
+                            data={this.state.members}
+                            renderItem={({ item }) => (
+
+
+                                <ListItem
+                                    
+                                    title={item.name}
+                                    titleStyle={{
+                                        color: 'black',
+                                        fontWeight: 'bold'
+                                    }}
+                                    subtitle={item.email}
+                                    leftAvatar={{
+                                        size: 35,
+                                        overlayContainerStyle: { backgroundColor: 'gray' },
+                                        
+                                    }}
+
+                                    bottomDivider
+                                />
+                            )}
+                            keyExtractor={item => item.id}
+                        />
+                    </View>
                 </View>
             </View>
 
-            
+
         ]
     }
 }
 
 const styles = StyleSheet.create({
+    containerRow: {
+        flex: 1,
+        flexDirection: "row",
+        padding: 1,
+    },
+    containerChildRow: {
+        
+        flex: 1,
+        padding: 12,
+        
+        justifyContent: 'center'
+    },
+    containerChildRowShare: {
+
+        flex: 0.1,
+        backgroundColor: 'black',
+        alignItems: 'center',
+       
+    },
     welcome: {
 
         fontFamily: 'Roboto',
@@ -118,24 +145,24 @@ const styles = StyleSheet.create({
         fontSize: 28
     },
     secondtitle: {
-
+        padding: 5,
         fontFamily: 'Roboto',
         fontWeight: 'bold',
-        //alignItems: 'center',
+       
         justifyContent: 'center',
         fontSize: 22
     },
     container: {
         flex: 1,
         flexDirection: "column",
-        //padding: 10
+       
     },
     title: {
         backgroundColor: '#B8DBEB',
         flex: 0.13,
-        //alignItems: 'center',
+        
         flexDirection: "column",
-        //padding: 10
+       
     },
     containerColumn: {
         flex: 1,
@@ -144,7 +171,7 @@ const styles = StyleSheet.create({
     },
     containerChild1: {
         flex: 0.80,
-        //padding: 10,
+        
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -162,69 +189,62 @@ const styles = StyleSheet.create({
 
         flex: 0.9,
         padding: 10,
-        //alignItems: 'center',
+        
         justifyContent: 'center'
     },
     invitacion: {
         color: '#222B45',
-        backgroundColor: 'white',
+       
+        marginEnd: 9,
         borderWidth: 1.3,
         borderRadius: 38,
         borderColor: '#000000',
-        paddingTop: 4,
+        
         paddingHorizontal: 20,
         marginLeft: 7,
-        marginBottom: 5,
-        marginTop: 10,
-
+        
         flex: 0.9,
-        padding: 10,
-        //alignItems: 'center',
-        justifyContent: 'center'
+       
     },
     miembros: {
         color: '#222B45',
-        //backgroundColor: 'red',
+       
         borderWidth: 1,
         borderRadius: 65,
         borderColor: '#000000',
-        //paddingTop: 4,
+        
         paddingHorizontal: 2,
         marginLeft: 14,
         marginBottom: 9,
         marginTop: 9,
 
-        //flex: 0.12,
+       
         padding: 6,
-        //alignItems: 'center',
-        //justifyContent: 'center'
+        
     },
     containerChild2: {
 
         flex: 0.3,
         padding: 10,
-        //backgroundColor: 'red'
-        
+       
+
     },
     containerChild3: {
 
         flex: 0.2,
         padding: 5,
-       //backgroundColor: 'red'
+  
     },
     containerChildM: {
 
         flex: 0.6,
         padding: 5,
-        //backgroundColor: 'red'
-        
+       
+
     },
     image: {
-        //flexDirection: 'row',
-        //padding: 10,
-        //resizeMode: "center",
-        width: 19,
-        height: 55,
-        //margin: 10
+        
+        width: 70,
+        height: 79,
     }
 })
